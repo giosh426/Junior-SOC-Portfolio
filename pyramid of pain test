@@ -3,11 +3,13 @@ SOC analyst portfolio containing projects and tests to prove my knowledge
 ## Pyramid of pain THM PENTEST
 This is a summary of the steps taken in the thm pyramid of pain test. I'll gradually block the threat actor's activity, by climbing the pyramid of pain in order
 # Context
-I've been provided with a file named sample1.exe, labeled by the malware simulated sandbox to be malicious (a trojan metasploit). The file tries to connect to unusual ports.
+I've been provided with a file named sample1.exe, labeled by the simulated sandbox to be malicious (a trojan metasploit). The file tries to connect to unusual ports.
 # Actions taken
 1* First action taken after detection was blocking the md5 hash value. This action temporarly blocked the malware. Hashes are easily changeable
-2* I now proceed by blocking outbound traffic from the specific ip that the sandbox provided me with after analyzing sample2.exe
-3* At this point the file named sample3.exe is also capable of downloading executables from internet and I notice that it tried to connect the sandbox to a specific domain. I proceed by blacklisting the domain
+2* I now proceed by blocking outbound traffic from the specific ip that the sandbox provided me with after analyzing sample2.exe. (The first 2 steps have to be considered trivial)
+3* At this point the file named sample3.exe is also capable of downloading executables from internet and I notice that it tried to connect the sandbox to a specific domain. I proceed by blacklisting the domain (Threat actors can easily change domain and keep going)
 4* Sample4 now disables windows defender monitoring too. I decided to take a look at the artifacts left by the malware and found out the file disabled the defence via the registry key. Thanks to sigma rule builder i created a detection system blocking other threats from having access to the registry
 5* Sample5 was a c2 beaconing attempt. The logs showed Get requests made to different ip's and ports but an almost identical url every 30 minutes. Configuring a new Sigma network connections rule blocked the beaconing attempt
-6* 
+6* Sample6 is where the attacker tried to gain as much informations as possible by using common windows tools straight into the powershell. I created a Sigma rule that reports when a cmd.exe command tries to launch a process
+#Conclusions
+This activity gave me the opportunitiy to apply my Pyramid of Pain knowledge and better understand threat actor's steps
