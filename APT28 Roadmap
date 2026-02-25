@@ -1,0 +1,15 @@
+In this activity i will use the Mitre att&ck navigator to create a roadmap to prevent and explain the attacks from the APT28 group
+# Start
+# 1 Reconnaissance-Resource Development-Initial Access
+The group usually start their intrusion in the systems by sending a spearphishing link, aiming for login credentials and access. The phishing mail might also advice to download a file. 
+Prevention:
+Having a strong MFA prevents unauthorized users from gaining access.
+Preparing employees on recognizing phishing attempts is fundamental
+Decection:
+Look for strange process spawns originating from outlook, strange scripts in the powershell/Windows Command Shell
+# 2 Execution-Defense Evasion 
+The group might land a script inside the boot execution. They could also land a LOtL attack and evade defences by using system binaries, or could also use commands like tcpdump to trace packets
+Prevention:
+Properly configured firewall preventing alterations of the boot or logon autostart execution or siem tools
+# 3 Lateral Movement
+After gaining enough access, the groups uses SMB/Windows Admin shares to hide their trace when moving to another machine
