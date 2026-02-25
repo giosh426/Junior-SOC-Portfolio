@@ -1,4 +1,4 @@
-In this activity i will use the Mitre att&ck navigator to create a roadmap to prevent and explain the attacks from the APT28 group
+In this activity i will use the Mitre att&ck navigator to create a roadmap to prevent and explain the attacks from the APT28 group based on the THM test
 # Start
 # 1 Reconnaissance-Resource Development-Initial Access
 The group usually start their intrusion in the systems by sending a spearphishing link, aiming for login credentials and access. The phishing mail might also advice to download a file. 
@@ -12,4 +12,6 @@ The group might land a script inside the boot execution. They could also land a 
 Prevention:
 Properly configured firewall preventing alterations of the boot or logon autostart execution or siem tools
 # 3 Lateral Movement
-After gaining enough access, the groups uses SMB/Windows Admin shares to hide their trace when moving to another machine
+After gaining enough access, the groups uses SMB/Windows Admin shares to hide their trace when moving to another machine.
+Detection:
+Look for specific event IDs
