@@ -1,0 +1,11 @@
+In this activity I will analyze some phishing attempts and document my steps
+(I properly defanged risky links and IP addresses)
+
+# 1st case START
+The phishing mail tries to resemble netflix and asks to update the payment details. The first thing easily noticeable is the source mail and the domain name, JGQ47wazXe1xYVBrkeDg-JOg7ODDQwWdR@JOg7ODDQwWdR-yVkCaBkTNp.gogolecloud.com.
+# Techniques used
+Typosquatting and string randomizer
+# Final Report
+By analyzing the source, I found the originating ip address, 209[.]85[.]167[.]226, the domain of interest, etekno[.]xyz and the shortened URL, hxxps[://]t[.]co/yuxfZm8KPg?amp==1.
+The spf result was none
+# 2nd case START
