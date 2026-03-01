@@ -9,3 +9,12 @@ Typosquatting and string randomizer
 By analyzing the source, I found the originating ip address, 209[.]85[.]167[.]226, the domain of interest, etekno[.]xyz and the shortened URL, hxxps[://]t[.]co/yuxfZm8KPg?amp==1.
 The spf result was none
 # 2nd case START
+I analyzed the mail using anyrun, that classified it as suspicious activity. The mail tried to resemble netflix again but also uploaded a pdf file named Payment-updateid.pdf.
+The sha256 has of the pdf is cc6f1a04b10bcb168aeec8d870b97bd7c20fc161e8310b5bce1af8ed420e2c24 and the ip addresses classified as malicious by anyrun are 2[.]16[.]107[.]24 and 2[.]16[.]107[.]83
+The process  svchost.exe was flagged as potentially bad traffic.
+# 3rd case START
+The sandboxing tool labeled this mail as malicious activity. It contains an excel file infected with a trojan. The excel file is CBJ200620039539.xlsx and his sha 256 hash is 5f94a66e0ce78d17afc2dd27fc17b44b3ffc13ac5f42d3ad6a5dcfb36715f3eb
+The tool listest these domains as malicious:biz9holdings[.]com,findresults[.]site,ww38[.]findresults[.]site
+The ips labeled as  malicious are 75[.]2[.]11[.]242,103[.]224[.]182[.]251,204[.]11[.]56[.]48
+The vulnerability that the malicious attachment tries to exploit is CVE-2017-11882
+The attacker takes advantage of EQNEDT.EXE, that helps excel when doing calculations. When a file is too big, data spills over and gives the threat actor the opportunity to launch a command
