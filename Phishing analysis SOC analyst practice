@@ -17,4 +17,5 @@ The sandboxing tool labeled this mail as malicious activity. It contains an exce
 The tool listest these domains as malicious:biz9holdings[.]com,findresults[.]site,ww38[.]findresults[.]site
 The ips labeled as  malicious are 75[.]2[.]11[.]242,103[.]224[.]182[.]251,204[.]11[.]56[.]48
 The vulnerability that the malicious attachment tries to exploit is CVE-2017-11882
-The attacker takes advantage of EQNEDT.EXE, that helps excel when doing calculations. When a file is too big, data spills over and gives the threat actor the opportunity to launch a command
+The attacker takes advantage of EQNEDT.EXE, that helps excel when doing calculations. When a file is too big, data spills over and gives the threat actor the opportunity to launch a command.
+The CVE combined with the domains gives us a clear picture, a LotL attack followed by a C2
