@@ -1,0 +1,4 @@
+In this activity i will use wireshark to analyze a pcap file with SMTP traffic
+To find the smtp response codes i start by filtering the results using smtp.response.code. I found out that this file has 19 220 service ready responses
+There's a response that indicates that the email was blocked by spamhaus.org and the response code was 553 with the full code being Requested action not taken: mailbox name not allowed (553)
+6 messages were blocked for presenting potential security issues and had 552 as a response code
