@@ -1,0 +1,6 @@
+In this activity i will analyze a mail recieved by a Sales Executive sent by a client. The Executive, suspicious about the mail(also containing an attachment), forwards the mail to the SOC department.
+#START
+The mail contains details about the receipt of payment. For example the transfer reference number is 09674321. The email is from mr james jackson but the email used is info@mutawamarine.com and the replies will be sent to info.mutawamarine@mail.com
+The originating ip is 192.119.71.157. The mail did not pass the SPF test and dmarc result is unknown (this should've quarantined the mail). The owner of the ip is hostwinds LLc. the spf record for the return path domain is: v=spf1 include:spf.protection.outlook.com -all
+The DMARC record for the return path domain is: v=DMARC1; p=quarantine; fo=1
+The name of the attackment is SWT_#09674321____PDF__.CAB and his sha256 hash is: 2e91c533615a9bb8929ac4bb76707b2444597ce063d84a4b33525e25074fff3f. After getting the hash we can paste it on virustotal. I found out that it was a rar file labeled by many vendors as a trojan
